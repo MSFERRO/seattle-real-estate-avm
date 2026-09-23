@@ -125,7 +125,7 @@ Métricas como $R^2$ e RMSE em log-space são fundamentais para matemáticos e c
 Para eliminar o efeito "caixa-preta", o sistema integra a biblioteca **SHAP (SHapley Additive exPlanations)** com um `TreeExplainer` otimizado:
 
 ```mermaid
-pie title Principais Drivers de Valorização do Imóvel (SHAP Attribution)
+pie title Principais Drivers de Valorização do Imóvel
     "Área Útil Habitável (sqft_living)" : 32
     "Padrão Construtivo e Acabamento (grade)" : 24
     "Localização e Renda do CEP (hous_val_amt / lat)" : 22
@@ -146,21 +146,21 @@ Projetamos uma arquitetura de microsserviço pronta para ambientes de nuvem (AWS
 
 ```mermaid
 flowchart TD
-    Client([Usuário / Web App / Sistema Imobiliário]) -->|HTTP POST JSON| Gateway[Nginx / API Gateway]
-    Gateway --> API[FastAPI Microservice Container]
+    Client(["Usuário / Web App / Sistema Imobiliário"]) -->|"HTTP POST JSON"| Gateway["Nginx / API Gateway"]
+    Gateway --> API["FastAPI Microservice Container"]
     
-    subgraph FastAPI Service
-        API --> V[Pydantic V2 Schema Validation]
-        V --> P[Trained Scikit-Learn Pipeline]
-        P --> E[Demographics Enricher with Fallback]
-        E --> F[Spatial & Structural Feature Engineering]
-        F --> M[LightGBM Champion Regressor]
-        M --> S[SHAP TreeExplainer Attribution]
-        M --> Prom[/metrics Prometheus Endpoint]
+    subgraph Service ["FastAPI Service"]
+        API --> V["Pydantic V2 Schema Validation"]
+        V --> P["Trained Scikit-Learn Pipeline"]
+        P --> E["Demographics Enricher with Fallback"]
+        E --> F["Spatial and Structural Feature Engineering"]
+        F --> M["LightGBM Champion Regressor"]
+        M --> S["SHAP TreeExplainer Attribution"]
+        M --> Prom["Prometheus Metrics Endpoint (/metrics)"]
     end
 
-    API -->|JSON Response| Client
-    Prom --> Prometheus[(Prometheus / Grafana Observability)]
+    API -->|"JSON Response"| Client
+    Prom --> Prometheus[("Prometheus / Grafana Observability")]
 ```
 
 ### Endpoints da API
@@ -189,12 +189,12 @@ O módulo `src/models/predict.py` executa automaticamente o teste bicaudal de **
 
 ```mermaid
 flowchart LR
-    A[Coleta de Novos Dados de Venda] --> B[Data Drift / Drift Detector]
-    B -->|Drift Detectado ou Agendamento Mensal| C[Pipeline de Retreino Automatizado]
-    C --> D[5-Fold CV & Validação Contra Modelo Campeão]
-    D -->|Se Novo Modelo > Campeão Atual| E[Shadow Deployment / Canary Release]
-    E -->|Métricas Estáveis em Produção| F[Promoção a Modelo Campeão]
-    E -->|Anomalias ou Erros| G[Rollback Imediato]
+    A["Coleta de Novos Dados de Venda"] --> B["Data Drift / Drift Detector"]
+    B -->|"Drift Detectado ou Agendamento Mensal"| C["Pipeline de Retreino Automatizado"]
+    C --> D["5-Fold CV e Validação Contra Modelo Campeão"]
+    D -->|"Se Novo Modelo > Campeão Atual"| E["Shadow Deployment / Canary Release"]
+    E -->|"Métricas Estáveis em Produção"| F["Promoção a Modelo Campeão"]
+    E -->|"Anomalias ou Erros"| G["Rollback Imediato"]
 ```
 
 1. **Trigger de Retreino:** Mensalmente ou sob demanda quando a taxa de drift de features críticas ultrapassa o limite seguro.
