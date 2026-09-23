@@ -1,0 +1,37 @@
+{
+    "Baseline_Median": {
+        "mean_MAE_usd": 219836.75,
+        "mean_RMSE_usd": 371198.29,
+        "mean_MAPE_pct": 42.51,
+        "mean_R2": -0.0594,
+        "std_R2": 0.0049
+    },
+    "Ridge_Linear": {
+        "mean_MAE_usd": 76735.94,
+        "mean_RMSE_usd": 131579.33,
+        "mean_MAPE_pct": 14.26,
+        "mean_R2": 0.8655,
+        "std_R2": 0.0172
+    },
+    "Random_Forest": {
+        "mean_MAE_usd": 68671.16,
+        "mean_RMSE_usd": 130785.92,
+        "mean_MAPE_pct": 12.65,
+        "mean_R2": 0.8689,
+        "std_R2": 0.0111
+    },
+    "LightGBM": {
+        "mean_MAE_usd": 61824.8,
+        "mean_RMSE_usd": 114672.95,
+        "mean_MAPE_pct": 11.69,
+        "mean_R2": 0.8991,
+        "std_R2": 0.0097
+    },
+    "XGBoost": {
+        "mean_MAE_usd": 62054.4,
+        "mean_RMSE_usd": 114973.39,
+        "mean_MAPE_pct": 11.71,
+        "mean_R2": 0.8985,
+        "std_R2": 0.0126
+    }
+}

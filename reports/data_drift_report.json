@@ -1,0 +1,280 @@
+{
+    "sample_sizes": {
+        "training_samples": 21613,
+        "future_unseen_samples": 100
+    },
+    "features": {
+        "bedrooms": {
+            "ks_statistic": 0.0521,
+            "p_value": 0.93577,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 3.37,
+                "std": 0.91,
+                "median": 3.0
+            },
+            "future_stats": {
+                "mean": 3.42,
+                "std": 0.84,
+                "median": 3.0
+            }
+        },
+        "bathrooms": {
+            "ks_statistic": 0.0426,
+            "p_value": 0.9899,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 2.12,
+                "std": 0.77,
+                "median": 2.25
+            },
+            "future_stats": {
+                "mean": 2.12,
+                "std": 0.69,
+                "median": 2.25
+            }
+        },
+        "sqft_living": {
+            "ks_statistic": 0.0554,
+            "p_value": 0.90127,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 2079.9,
+                "std": 918.44,
+                "median": 1910.0
+            },
+            "future_stats": {
+                "mean": 2012.47,
+                "std": 781.05,
+                "median": 1845.0
+            }
+        },
+        "sqft_lot": {
+            "ks_statistic": 0.0732,
+            "p_value": 0.62979,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 15106.97,
+                "std": 41420.51,
+                "median": 7618.0
+            },
+            "future_stats": {
+                "mean": 13520.8,
+                "std": 26498.88,
+                "median": 7324.0
+            }
+        },
+        "floors": {
+            "ks_statistic": 0.0725,
+            "p_value": 0.64212,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 1.49,
+                "std": 0.54,
+                "median": 1.5
+            },
+            "future_stats": {
+                "mean": 1.57,
+                "std": 0.56,
+                "median": 1.5
+            }
+        },
+        "waterfront": {
+            "ks_statistic": 0.0025,
+            "p_value": 1.0,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 0.01,
+                "std": 0.09,
+                "median": 0.0
+            },
+            "future_stats": {
+                "mean": 0.01,
+                "std": 0.1,
+                "median": 0.0
+            }
+        },
+        "view": {
+            "ks_statistic": 0.0329,
+            "p_value": 0.99979,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 0.23,
+                "std": 0.77,
+                "median": 0.0
+            },
+            "future_stats": {
+                "mean": 0.17,
+                "std": 0.7,
+                "median": 0.0
+            }
+        },
+        "condition": {
+            "ks_statistic": 0.0093,
+            "p_value": 1.0,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 3.41,
+                "std": 0.65,
+                "median": 3.0
+            },
+            "future_stats": {
+                "mean": 3.43,
+                "std": 0.64,
+                "median": 3.0
+            }
+        },
+        "grade": {
+            "ks_statistic": 0.0267,
+            "p_value": 1.0,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 7.66,
+                "std": 1.18,
+                "median": 7.0
+            },
+            "future_stats": {
+                "mean": 7.61,
+                "std": 1.12,
+                "median": 7.0
+            }
+        },
+        "sqft_above": {
+            "ks_statistic": 0.0695,
+            "p_value": 0.69335,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 1788.39,
+                "std": 828.09,
+                "median": 1560.0
+            },
+            "future_stats": {
+                "mean": 1815.77,
+                "std": 773.34,
+                "median": 1660.0
+            }
+        },
+        "sqft_basement": {
+            "ks_statistic": 0.1032,
+            "p_value": 0.22184,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 291.51,
+                "std": 442.58,
+                "median": 0.0
+            },
+            "future_stats": {
+                "mean": 196.7,
+                "std": 346.45,
+                "median": 0.0
+            }
+        },
+        "yr_built": {
+            "ks_statistic": 0.0667,
+            "p_value": 0.73887,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 1971.01,
+                "std": 29.37,
+                "median": 1975.0
+            },
+            "future_stats": {
+                "mean": 1974.67,
+                "std": 28.77,
+                "median": 1977.0
+            }
+        },
+        "yr_renovated": {
+            "ks_statistic": 0.0213,
+            "p_value": 1.0,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 84.4,
+                "std": 401.68,
+                "median": 0.0
+            },
+            "future_stats": {
+                "mean": 59.78,
+                "std": 341.64,
+                "median": 0.0
+            }
+        },
+        "zipcode": {
+            "ks_statistic": 0.1208,
+            "p_value": 0.09956,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 98077.94,
+                "std": 53.51,
+                "median": 98065.0
+            },
+            "future_stats": {
+                "mean": 98069.75,
+                "std": 52.88,
+                "median": 98056.0
+            }
+        },
+        "lat": {
+            "ks_statistic": 0.16,
+            "p_value": 0.01051,
+            "drift_detected": true,
+            "train_stats": {
+                "mean": 47.56,
+                "std": 0.14,
+                "median": 47.57
+            },
+            "future_stats": {
+                "mean": 47.52,
+                "std": 0.14,
+                "median": 47.53
+            }
+        },
+        "long": {
+            "ks_statistic": 0.1738,
+            "p_value": 0.00412,
+            "drift_detected": true,
+            "train_stats": {
+                "mean": -122.21,
+                "std": 0.14,
+                "median": -122.23
+            },
+            "future_stats": {
+                "mean": -122.18,
+                "std": 0.15,
+                "median": -122.17
+            }
+        },
+        "sqft_living15": {
+            "ks_statistic": 0.0473,
+            "p_value": 0.97095,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 1986.55,
+                "std": 685.39,
+                "median": 1840.0
+            },
+            "future_stats": {
+                "mean": 1953.21,
+                "std": 636.71,
+                "median": 1845.0
+            }
+        },
+        "sqft_lot15": {
+            "ks_statistic": 0.051,
+            "p_value": 0.94549,
+            "drift_detected": false,
+            "train_stats": {
+                "mean": 12768.46,
+                "std": 27304.18,
+                "median": 7620.0
+            },
+            "future_stats": {
+                "mean": 12228.87,
+                "std": 24282.11,
+                "median": 7346.0
+            }
+        }
+    },
+    "overall_drift_detected": false,
+    "drift_feature_ratio": 0.111
+}
